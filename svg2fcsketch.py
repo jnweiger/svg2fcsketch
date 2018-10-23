@@ -1225,6 +1225,7 @@ else:
     fcstdfile = re.sub('\.svg$', '.fcstd', svgfile, re.I)
 docname = re.sub('\.fcstd$', '', fcstdfile, re.I)
 docname = re.sub('^.*/', '', docname)
+docname = docname.replace('.', '_')
 
 if not options.outfile:
   if sys.stdout.isatty():
